@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Random Background",
+  "description": "Background Changer by Uriel Dahan",
+  "version": "1.0",
+  "icons": {
+    "16": "/images/img1.png",
+    "32": "/images/img1.png",
+    "48": "/images/img1.png",
+    "128": "/images/img1.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/images/img1.png",
+      "32": "/images/img1.png",
+      "48": "/images/img1.png",
+      "128": "/images/img1.png"
+    }
+  },
+  "permissions": ["scripting", "activeTab"],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+U",
+        "mac": "Command+U"
+      }
+    }
+  },
+  "content_scripts":[{
+    "matches": ["https://*.google.com/*"],
+    "css":["main.css"]
+  }]
+
+}
